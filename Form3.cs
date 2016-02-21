@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //this for loop will run for the amount of people in the array
             for (i = 0; i <= Form2.counter; i++)
             {
                 if (txt_username.Text==Form2.v_username[i] && txt_password.Text==Form2.v_password[i])

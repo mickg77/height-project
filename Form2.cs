@@ -45,6 +45,7 @@ namespace WindowsFormsApplication1
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            //if the counter is less than zero then the database cannot be full yet
             if (counter < 20)
             {
                 v_username[counter] = txt_username.Text;
@@ -55,11 +56,12 @@ namespace WindowsFormsApplication1
                 txt_password.Text = "";
                 txt_height.Text = "";
 
-                counter++;
+                counter++;// this is crucial. It adds one on to the counter every time a new record is added. Without this, we would just
+                           //overwrite the same value again and again.
             }
             else
             {
-                MessageBox.Show("Database is full");
+                MessageBox.Show("Database is full");//displayed if the counter is greater than 20
             }
         }
 
